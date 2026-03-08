@@ -1,3 +1,19 @@
+const burgerButton = document.querySelector(".burgerButton");
+const burgerContent = document.querySelector(".burgerContent");
+
+burgerButton.addEventListener("click", (event) => {
+    event.stopPropagation();
+    burgerContent.classList.toggle("active");
+});
+
+burgerContent.addEventListener("click", (event) => {
+    event.stopPropagation();
+});
+
+window.addEventListener("click", () => {
+    burgerContent.classList.remove("active");
+});
+
 const formAi = document.getElementById("formAi");
 const screenAi = document.querySelector(".screenAi");
 const inputChat = document.getElementById("inputChat");
